@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.label.*?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="847.0" style="-fx-border-color: Blue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
+	<columnConstraints>
+		<ColumnConstraints hgrow="SOMETIMES" maxWidth="253.0" minWidth="10.0" prefWidth="209.0" />
+		<ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="309.0" />
+		<ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="10.0" prefWidth="208.0" />
+	</columnConstraints>
+	<rowConstraints>
+		<RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="250.0" minHeight="0.0" prefHeight="83.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="277.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+		<RowConstraints maxHeight="277.0" minHeight="10.0" prefHeight="84.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="277.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="277.0" minHeight="10.0" prefHeight="197.0" vgrow="SOMETIMES" />
+	</rowConstraints>
+	<children>
+		<VBox alignment="CENTER" fillWidth="false" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+			<children>
+				<Label id="emailLabel" fx:id="usernameLabel" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" text="Username" textAlignment="CENTER" textFill="BLUE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding></Label>
+			</children>
+		</VBox>
+		<VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+			<children>
+				<TextField id="emailTextField" fx:id="usernameField" prefHeight="18.0" prefWidth="200.0" promptText="Enter Username Here" style="-fx-border-color: BLUE;" />
+			</children>
+		</VBox>
+		<VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+			<children>
+				<Label id="passwordLabel" fx:id="passwordLabel" alignment="CENTER" contentDisplay="TOP" focusTraversable="false" text="Password" textAlignment="CENTER" textFill="#eea023">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding></Label>
+			</children>
+		</VBox>
+		<VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <PasswordField fx:id="passwordField" promptText="Enter Password Here" style="-fx-border-color: #eea023;">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></PasswordField>
+         </children>
+		</VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <children>
+            <TextField id="emailTextField" fx:id="emailField" prefHeight="18.0" prefWidth="200.0" promptText="Enter Email Here" style="-fx-border-color: #a41212;" />
+         </children>
+      </VBox>
+		<VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+			<children>
+				<Label fx:id="newAccountLabel" alignment="TOP_LEFT" focusTraversable="false" prefHeight="63.0" prefWidth="266.0" text="After entering a username, password, and email click the &quot;Create New Account&quot; button." textAlignment="CENTER" wrapText="true">
+					<VBox.margin>
+						<Insets />
+					</VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+				</Label>
+				<Button fx:id="newAccountBtn" mnemonicParsing="false" onAction="#createNewAccountOnAction" prefHeight="43.0" prefWidth="179.0" text="Create New Account" textAlignment="CENTER" textFill="BLUE">
+					<VBox.margin>
+						<Insets />
+					</VBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+				</Button>
+            <Button fx:id="goBackBtn" mnemonicParsing="false" onAction="#goBackOnAction" prefHeight="43.0" prefWidth="127.0" text="Go Back To Login" textFill="BLUE" wrapText="true">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+			</children>
+		</VBox>
+		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-text-alignment: CENTER;" styleClass="-fx-text-alignment:CENTER" GridPane.columnSpan="3">
+			<children>
+				<TextArea id="titleDisplayArea" editable="false" prefHeight="84.0" prefWidth="914.0" style="-fx-border-color: BLUE;" text="Welcome New User! Please Enter AUsername, Password, And Email Below, Then Click Create New Account." wrapText="true">
+					<font>
+						<Font name="Cooper Black" size="18.0" />
+					</font>
+				</TextArea>
+			</children>
+		</HBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="4">
+         <children>
+            <Label id="passwordLabel" fx:id="emailLabel" alignment="CENTER" contentDisplay="TOP" focusTraversable="false" prefHeight="27.0" prefWidth="56.0" text="Email" textAlignment="CENTER" textFill="#a41212">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" prefHeight="64.0" prefWidth="155.0" text="EMAIL REQUIREMENTS:&#10;Email must:&#10;*follow standard format EX: username@gmail.com" textFill="#a41212" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="86.0" prefWidth="247.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <children>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" focusTraversable="false" prefHeight="82.0" prefWidth="248.0" text="PASSWORD REQUIREMENTS:&#10;Password must contain at least:&#10;* One Uppercase Letter&#10;* One Lowercase Letter&#10;* One Number" textFill="#eea023" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" prefHeight="144.0" prefWidth="247.0" text="USERNAME REQUIREMENTS:&#10;Username must contain:&#10;*only letters or numbers&#10;*1-10 characters in length" textFill="BLUE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
+         <children>
+            <Label id="passwordLabel" fx:id="passwordLabel1" alignment="CENTER" contentDisplay="TOP" focusTraversable="false" text="Re-Type Password" textAlignment="CENTER" textFill="#eea023">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <children>
+            <PasswordField fx:id="reTypePasswordField" promptText="Re-Enter Password Here" style="-fx-border-color: #eea023;">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </PasswordField>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <children>
+            <Label alignment="CENTER" focusTraversable="false" prefHeight="75.0" prefWidth="205.0" text="PASSWORDS MUST MATCH!" textFill="#eea023" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+	</children>
+</GridPane>
